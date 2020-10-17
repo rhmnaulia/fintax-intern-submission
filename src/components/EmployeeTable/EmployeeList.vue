@@ -1,6 +1,6 @@
 <template>
   <v-container class="empContainer mt-5 elevation-2">
-    <h1 class="content-title pb-2">Employee List</h1>
+    <h2 class="content-title pb-2">Sortable Employee List</h2>
     <v-data-table
       :headers="headers"
       :items="list"
@@ -38,7 +38,7 @@ export default {
 
   mounted() {
     axios
-      .get('http://dummy.restapiexample.com/api/v1/employees')
+      .get('https://dummy.restapiexample.com/api/v1/employees')
       .then((res) => {
         this.list = res.data.data;
       })
@@ -68,7 +68,10 @@ tbody tr:nth-of-type(odd) {
 }
 
 .v-data-table-header {
-  background-color: #16213e;
+  background-color: #3e7dc0;
+  color: white;
+}
+.my-datatable-class .datatable thead th.column.sortable i {
   color: white;
 }
 
