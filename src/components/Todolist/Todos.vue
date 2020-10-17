@@ -1,6 +1,6 @@
 <template>
   <v-container class="todo-app elevation-3 mt-10">
-    <h1>Todolist</h1>
+    <h2>Todolist with Local Storage</h2>
 
     <v-text-field
       class="todo-input"
